@@ -6,6 +6,11 @@ on:
 
 jobs:
   CodeQL-Build:
+    strategy:
+      fail-fast: false
+      matrix:
+        languages: ['csharp', 'python']
+    
     runs-on: ubuntu-latest
 
     permissions:
